@@ -37,6 +37,7 @@ public class MainController {
         model.addAttribute("birthstoneDescription", birthStone.getExplan());
 
         return "result_page";
+
     }
 
     @GetMapping("/birthstones")
@@ -44,5 +45,4 @@ public class MainController {
         model.addAttribute("list", stoneRepository.findAll());
         return "stoneAllinfo";
     }
-   
 }
