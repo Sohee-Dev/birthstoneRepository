@@ -24,17 +24,20 @@ public class MainController {
     @PostMapping("/birth")
     public String birth(@ModelAttribute UserInfo userInfo, Model model) {
         int month = userInfo.getUserBirthday().getMonthValue();
-        int idx = month -1;
+        String[] src = {"0.jpg", "1.png", "2.png", "3.png", "4.jpg", "5.jpg", "6.jpg", "7.jpg", "8.png", "9.jpg", "10.png", "11.jpg"};
+        
+        
 
         Stone birthStone = stoneRepository.findByMonth(month);
 
         model.addAttribute("username", userInfo.getName());
         model.addAttribute("month", month);
-        model.addAttribute("idx", idx);
+        model.addAttribute("src", src[month]);
         model.addAttribute("stone_name", birthStone.getName());
         model.addAttribute("birthstoneDescription", birthStone.getExplan());
 
-        return "stone_info";
+        return "result_page";
+
     }
 
     @GetMapping("/birthstones")

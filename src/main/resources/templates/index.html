@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Main Page</title>
+    <link rel="stylesheet" th:href="@{/css/birthstone_index.css}">
+</head>
+<body>
+    <div class="wrapper">
+        <div class="content">
+            <h1 class="content_title">나의 탄생석을 알아보자!</h1>
+            <h4 class="content_h4">생년월일과 성명을 입력하여 나의 탄생석을 알아보세요💎✨</h4>
+            <div class="inputContent">
+                <form action="/birth" method="post" id="input_form" name="birthDay">
+                    <label class="type_text">생년월일</label><br><br>
+                    <input type="date" name="userBirthday" id="date" required><br><br>
+                    <label class="type_text">성명</label><br><br>
+                    <input type="text" name="name" id="name" placeholder="성명 입력" required>
+                    <br><br>
+                    <input type="submit" value="조회" id="search_btn">
+                </form>
+            </div>
+        </div>
+        
+    </div>
+</body>
+</html>
