@@ -1,5 +1,3 @@
-@charset "UTF-8";
-
 @font-face {
   font-family: 'BNKGothic';
   src: url('../fonts/BNKGothic-Regular.ttf') format('truetype');
@@ -61,9 +59,9 @@ body {
     margin-top: 20px;
 }
 
-#main_btn{
+.main_btn{
     font-weight: bold;
-    width: 100%;
+    width: 200px;
     padding: 5px;
     background-color: rgba(158, 217, 245, 0.7);
     border: solid 1px;
@@ -72,8 +70,15 @@ body {
     margin-top: 20px;
 }
 
+#btn{
+    display: flex;
+    justify-content: center;
+    gap: 100px; /* 버튼 사이 간격 */
+    margin-top: 20px;
+}
 
-#main_btn:hover{
+
+.main_btn:hover{
     background-color: #1b2e44;
     border-color: rgb(255,255,255);
     color: white;

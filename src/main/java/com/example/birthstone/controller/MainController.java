@@ -32,7 +32,7 @@ public class MainController {
 
         model.addAttribute("username", userInfo.getName());
         model.addAttribute("month", month);
-        model.addAttribute("src", src[month]);
+        model.addAttribute("src", src[month-1]);
         model.addAttribute("stone_name", birthStone.getName());
         model.addAttribute("birthstoneDescription", birthStone.getExplan());
 
